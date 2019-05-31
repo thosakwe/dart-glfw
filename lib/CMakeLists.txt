@@ -14,3 +14,6 @@ find_library(GLFW3_LIBRARY NAMES glfw3 glfw)
 find_path(GLFW3_INCLUDE_DIR GLFW/glfw3.h)
 target_include_directories(glfw_extension PUBLIC ${GLFW3_INCLUDE_DIR})
 target_link_libraries(glfw_extension ${GLFW3_LIBRARY})
+
+# Install it to lib/src.
+install(TARGETS glfw_extension LIBRARY DESTINATION "${CMAKE_CURRENT_LIST_DIR}/src")
