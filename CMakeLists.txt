@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.0)
+project(dart_glfw)
+set(EXPORT_COMPILE_COMMANDS ON)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/third_party/cmake_dart_utils/cmake")
+add_subdirectory(lib)
