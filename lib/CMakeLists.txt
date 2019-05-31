@@ -17,3 +17,6 @@ target_link_libraries(glfw_extension ${GLFW3_LIBRARY})
 
 # Install it to lib/src.
 install(TARGETS glfw_extension LIBRARY DESTINATION "${CMAKE_CURRENT_LIST_DIR}/src")
+
+# ... And to the root...
+install(TARGETS glfw_extension LIBRARY DESTINATION "${CMAKE_CURRENT_LIST_DIR}/..")
