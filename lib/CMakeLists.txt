@@ -9,11 +9,7 @@ add_dart_native_extension(glfw_extension
   src/generated/glfw_bindings.h src/generated/glfw_bindings.cc
 )
 
-# Find and include GLFW...
-find_library(GLFW3_LIBRARY NAMES glfw3 glfw)
-find_path(GLFW3_INCLUDE_DIR GLFW/glfw3.h)
-target_include_directories(glfw_extension PUBLIC ${GLFW3_INCLUDE_DIR})
-target_link_libraries(glfw_extension ${GLFW3_LIBRARY})
+target_link_libraries(glfw_extension ${GLFW_LIBRARIES})
 
 # Install it to lib/src.
 install(TARGETS glfw_extension LIBRARY DESTINATION "${CMAKE_CURRENT_LIST_DIR}/src")

@@ -41,3 +41,5 @@ _deps
 *-prefix/
 
 # End of https://www.gitignore.io/api/cmake
+build/
+cmake-build-*
